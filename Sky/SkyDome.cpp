@@ -27,6 +27,7 @@ namespace OpenEngine {
 namespace Sky {
 
   SkyDome::SkyDome(PropertyList* plist) {
+  
 	int horiRes                 = plist->GetInt("resolution.horizontal");
 	int vertRes                 = plist->GetInt("resolution.vertical");
 	float texturePercentage     = plist->GetFloat("texture.percentage");
@@ -39,6 +40,7 @@ namespace Sky {
     
     sceneNode = new DisableLightingNode();
     sceneNode->AddNode(new GeometryNode(faces));
+    
   }
 
   SkyDome::~SkyDome() {
@@ -54,7 +56,6 @@ namespace Sky {
 	float azimuth = 0.0;
 	float azimuth_step = 2.0 * Math::PI / (float)horiRes;
 	
-	//float elevation; // = Math::PI / 2.0;
 	float elevation_step = domePercentage * Math::PI / 2.0 / (float)vertRes;
 
 	const float tcV = (float)texturePercentage / (float)vertRes;
@@ -74,7 +75,6 @@ namespace Sky {
 			elevation -= elevation_step;
 		}
 		azimuth += azimuth_step;
-		printf("azimuth: %f\n", azimuth);
 	}
 	
 	FaceSet* faces = new FaceSet();
