@@ -46,6 +46,8 @@ namespace Sky {
   }
   
   FaceSet* SkyDome::CreateDome(int horiRes, int vertRes, float texturePercentage, float domePercentage, float radius, Vector<3,float> center, ITextureResourcePtr texture) {
+  	// COPYRIGHT NOTICE: Code in this method is based on code written by Anders la Cour-Harbo for the irrlicht engine
+  
 	if (domePercentage < 0.0)	domePercentage =- domePercentage;
 	if (domePercentage > 2.0)	domePercentage = 2.0;
 
