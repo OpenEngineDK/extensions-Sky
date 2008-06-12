@@ -101,7 +101,7 @@ namespace Sky {
 	face->texc[0] = texCoords[i1];
 	face->texc[1] = texCoords[i2];
 	face->texc[2] = texCoords[i3];
-	face->texr = texture;
+	face->mat->texr = texture;
 	return face;
   }
   

@@ -78,7 +78,7 @@ namespace Sky {
     FacePtr face1 = FacePtr(new Face(vertices[0], vertices[1], vertices[2]));
     FacePtr face2 = FacePtr(new Face(vertices[2], vertices[3], vertices[0]));
     
-    face1->texr = face2->texr = tex;
+    face1->mat->texr = face2->mat->texr = tex;
     
     face1->norm[0] = face1->norm[1] = face1->norm[2] = norm;
     face2->norm[0] = face2->norm[1] = face2->norm[2] = norm;
