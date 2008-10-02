@@ -9,8 +9,6 @@
 
 #include "SkyBox.h"
 
-#include "Meta/OpenGL.h"
-
 #include <Resources/ResourceManager.h>
 #include <Renderers/DisableLightingNode.h>
 

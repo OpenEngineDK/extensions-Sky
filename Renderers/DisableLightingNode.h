@@ -10,6 +10,7 @@
 #ifndef _DISABLE_LIGHTING_NODE_H_
 #define _DISABLE_LIGHTING_NODE_H_
 
+#include <Meta/OpenGL.h>
 #include <Renderers/IRenderNode.h>
 #include <Renderers/IRenderingView.h>
 
