@@ -11,16 +11,16 @@
 #define _DISABLE_LIGHTING_NODE_H_
 
 #include <Meta/OpenGL.h>
-#include <Renderers/IRenderNode.h>
+#include <Scene/RenderNode.h>
 #include <Renderers/IRenderingView.h>
 
 namespace OpenEngine {
 namespace Renderers {
 
-using OpenEngine::Renderers::IRenderNode;
+using OpenEngine::Scene::RenderNode;
 using OpenEngine::Renderers::IRenderingView;
 
-class DisableLightingNode : public IRenderNode {
+class DisableLightingNode : public RenderNode {
 public:
     virtual void Apply(IRenderingView* view) {
     	GLboolean lighting = glIsEnabled(GL_LIGHTING);
